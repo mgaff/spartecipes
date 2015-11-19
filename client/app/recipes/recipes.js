@@ -9,8 +9,8 @@ angular.module('recipes')
   $scope.updateList = function(){
     ShoppingList.orderIngredients(function (newList){
       $scope.data.ingredients = newList;
-    })
-  }
+    });
+  };
   
   $scope.retrieveRecipes = function (data) {
     Search.getRecipes(data).then(function (recipes) {
